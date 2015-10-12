@@ -1,5 +1,6 @@
 {
-	"listen": 3000,
-	"socket": 5000,
+	"listen": 3333,
+	"socket": 5555,
+	"host": "localhost",
 	"arduinoIp": "123.456.7.89"
 }

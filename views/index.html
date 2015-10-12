@@ -7,10 +7,11 @@
 <body>
 
 	<div class="container">
-		<h1>Test app</h1>
+		<h1>Test app - {{host}}</h1>
 		<div class="amount"></div>
 	</div>
 
+	<script data-env type="application/json">{ "host": "{{host}}","socket": "{{socket}}" }</script>
 	<script src="js/app.js"></script>
 
 </body>

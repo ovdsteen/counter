@@ -1,7 +1,8 @@
 'use strict';
 
-var $ = require('jquery'),
-	socket = require('socket.io-client')('ws://localhost:5000');
+var jquery = require('jquery'),
+	config = JSON.parse( jquery('[data-env]').html() ),
+	socket = require('socket.io-client')('ws://'+config.host+':'+config.socket);
 
 var user = {
 	ip: Math.floor((Math.random() * 1000) + 1)
@@ -12,5 +13,5 @@ socket.on('connect', function(){
 });
 
 socket.on('update', function(data){
-	$('.amount').html(data.amount);
+	jquery('.amount').html(data.amount);
 });

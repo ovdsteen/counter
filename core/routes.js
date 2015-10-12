@@ -5,5 +5,8 @@ var app = require('./app'),
 	request = require('request');
 
 app.get('/', function(req, res){
-	res.render('index',{host: req.headers.host});
+	res.render('index', {
+		host: config.host,
+		socket: config.socket
+	});
 });
